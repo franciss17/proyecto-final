@@ -52,7 +52,7 @@ h5 {
 
 .row {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
 
 .d-flex {
@@ -267,7 +267,9 @@ p {
 }
 
 .carousel {
-    margin-bottom: 120px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 145px;
 }
 
 .footer {
@@ -283,9 +285,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .footer-top {
