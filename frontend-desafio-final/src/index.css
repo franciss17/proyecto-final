@@ -252,6 +252,12 @@ p {
     padding: 40px 0;
 }
 
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -349,4 +355,81 @@ p {
 .nuevo-header-img img {
     max-width: 100%;
     height: auto;
+}
+
+@media screen and (min-width: 992px) {
+
+    .navbar {
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    .form_container {
+        width: 50%;
+        padding: 50px;
+    }
+
+    .nuevo-header-img img {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .navbar {
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    .form_container {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .nuevo-header-img img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .navbar {
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    .form_container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .nuevo-header-img img {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.625rem;
+    }
+
+    .input_label {
+        font-size: 0.625rem;
+    }
+
+    .input_field {
+        height: 35px;
+    }
+
+    .sign-in_btn,
+    .sign-in_ggl,
+    .sign-in_apl {
+        height: 35px;
+    }
+
+    .separator {
+        gap: 20px;
+    }
 }
