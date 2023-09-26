@@ -1,0 +1,66 @@
+[
+    {
+        "desc": "La Pepperoni Pizza es una clásica y sabrosa creación que ha conquistado los corazones de los amantes de la pizza en todo el mundo. Esta pizza se destaca por su base de masa, generosamente cubierta con salsa de tomate, queso mozzarella derretido y, por supuesto, rebanadas de pepperoni, un tipo de salami ligeramente picante.",
+        "id": "P001",
+        "img":"https://tofuu.getjusto.com/orioneat-prod-resized/obg2bQdJza9yf9Pyo-350-350.webp",
+        "ingredients": ["Base Queso Mozzarella + Salsa Pomodoro", "Pepperoni", "Orégano"],
+        "name": "PEPPERONI",
+        "price": 8200
+    },
+    {
+        "desc": "La Olivo Pizza es una creación culinaria que combina la frescura y riqueza de las aceitunas con la tradicional delicia de la pizza. Nuestra especialidad incluye una variedad de ingredientes de primera calidad, desde aceitunas negras hasta champiñones, para brindarte una experiencia única de sabor mediterráneo en cada rebanada.",
+        "id": "P002",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/qnYsh9CDopE4deMh8-1200-1200.webp",
+        "ingredients": ["Base Queso Mozzarella + Salsa Pomodoro", "Aceitunas Negras", "Champiñones", "Choclo", "Espárragos"],
+        "name": "OLIVO",
+        "price": 8100
+    },
+    {
+        "desc": "La Campesina Pizza es una maravillosa creación que celebra la frescura de los ingredientes de la granja. Esta pizza presenta una base de masa perfectamente horneada, generosamente cubierta con una rica salsa de tomate casera. Sus ingredientes principales incluyen carne sabrosa, porotos verdes tiernos, tomate jugoso y ají picante.",
+        "id": "P003",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/kRbg2kopQKzx9J4Co-1200-1200.webp",
+        "ingredients": ["Base Queso Mozzarella + Salsa Pomodoro", "Carne", "Porotos Verdes", "Tomate", "Ají"],
+        "name": "CAMPESINA",
+        "price": 9000
+    },
+    {
+        "desc": "La Carnívora Pizza es una deliciosa creación que rinde homenaje a los amantes de la carne. Con una base de masa crujiente, esta pizza se inunda de una salsa pomodoro fresca y está abundantemente cubierta con queso mozzarella derretido que crea una capa de cremosidad irresistible.",
+        "id": "P004",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/8pWFLzTz5469dpuez-1200-1200.webp",
+        "ingredients": ["Base Queso Mozzarella + Salsa Pomodoro", "Carne", "Choricillo", "Jamón", "Pollo"],
+        "name": "CARNIVORA",
+        "price": 9100
+    },
+    {
+        "desc": "La Hawaiana Pizza es una mezcla encantadora de sabores dulces y salados en cada rebanada. Esta pizza comienza con una base de masa perfectamente horneada y se cubre con una generosa capa de queso mozzarella derretido que aporta cremosidad a cada bocado. Sus ingredientes estrella incluyen jamón y piña, que combinan la dulzura natural de la piña con la salinidad del jamón.​",
+        "id": "P005",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/HkCp4EcXj6h2p68of-1200-1200.webp",
+        "ingredients": ["Extra Queso Mozzarella", "Jamón", "Piña"],
+        "name": "HAWAIANA",
+        "price": 8100
+    },
+    {
+        "desc": "La Pollo BBQ Pizza es una verdadera delicia que combina la suavidad del pollo con la audacia de la salsa barbacoa. Comenzando con una base de masa perfectamente horneada, esta pizza se cubre con una salsa de barbacoa rica y una generosa cantidad de queso mozzarella derretido. Los trozos de pollo, previamente cocidos y sazonados con el delicioso sabor de la barbacoa, son el ingrediente principal que aporta una textura tierna y un sabor ahumado a la pizza.",
+        "id": "P006",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/tAF8hKfo4xtd2JRky-1200-1200.webp",
+        "ingredients": ["Base Queso Mozzarella", "Pollo", "Salsa BBQ", "Cebolla Morada", "Cebollin"],
+        "name": "POLLO BBQ",
+        "price": 9500
+    },
+    {
+        "desc": "La Margarita Pizza, conocida simplemente como Margarita, es una joya de la simplicidad en el mundo de la pizza. Con una base de masa delgada y crujiente, esta pizza presenta una mezcla de ingredientes básicos pero exquisitos. Se inicia con una salsa de tomate fresca y luego se cubre con una generosa base de crema, que se extienden de manera uniforme, creando una capa cremosa y deliciosa.",
+        "id": "P007",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/MwBokxEA6sQw2Q372-1200-1200.webp",
+        "ingredients": ["(Base Crema)", "Tomate Cherry", "Orégano", "Pesto de Albahaca y Albahaca"],
+        "name": "MARGARITA",
+        "price": 8100
+    },
+    {
+        "desc": "La Nonna Pizza con base de crema es una verdadera delicia que rinde homenaje a las tradiciones culinarias de la abuela (Nonna en italiano). Con una base de masa fina y crujiente, esta pizza destaca por su salsa de crema, que aporta una textura suave y un sabor indulgente.",
+        "id": "P008",
+        "img": "https://tofuu.getjusto.com/orioneat-prod-resized/Hvrhr9wNqPy3pyNC6-1200-1200.webp",
+        "ingredients": ["(Base Crema)", "Tocino Ahumado", "Espinaca ", "Champiñon"],
+        "name": "NONNA",
+        "price": 9200
+    }
+]
