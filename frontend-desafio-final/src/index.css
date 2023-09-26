@@ -10,7 +10,6 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #F0F0F0;
-
 }
 
 .nav-link {
@@ -53,8 +52,7 @@ h5 {
 
 .row {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: row;
 }
 
 .d-flex {
@@ -63,6 +61,32 @@ h5 {
 
 .card-body {
     font-size: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    min-height: 400px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -127,7 +151,7 @@ p {
     max-width: 80%;
     text-align: center;
     line-height: 1.1rem;
-    color: #8B8E98
+    color: #8B8E98;
 }
 
 .input_container {
@@ -388,6 +412,32 @@ body {
 
     .nuevo-header-img img {
         max-width: 100%;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.625rem;
+    }
+
+    .input_label {
+        font-size: 0.625rem;
+    }
+
+    .input_field {
+        height: 35px;
+    }
+
+    .sign-in_btn,
+    .sign-in_ggl,
+    .sign-in_apl {
+        height: 35px;
+    }
+
+    .separator {
+        gap: 20px;
     }
 }
 
