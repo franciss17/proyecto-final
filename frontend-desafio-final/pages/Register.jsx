@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../src/index.css"
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -31,7 +32,7 @@ const Register = () => {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <div className='Register sticky-bottom'  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <form style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }} onSubmit={handleSubmit}>
                 <h2 style={{ textAlign: 'center' }}>Registro</h2>
                 <div style={{ marginBottom: '10px' }}>

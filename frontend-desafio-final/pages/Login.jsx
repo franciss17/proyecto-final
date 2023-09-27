@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
+import "../src/index.css"
 
 const Login = () => {
     const navigate = useNavigate();
@@ -115,7 +116,7 @@ const Login = () => {
                     <button title="Sign In" type="submit" className="sign-in_btn">
                         <span>Sign In</span>
                     </button>
-                    <p className="note">Terms of use &amp; Conditions</p>
+                    
                 </form>
             </div>
         </>
