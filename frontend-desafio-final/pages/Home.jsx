@@ -17,7 +17,7 @@ export default function Products() {
     }
 
     return (
-        <div className="products-container">
+        <div className="products-container ">
             <Header />
             <div className="carousel">
                 <Carousel>

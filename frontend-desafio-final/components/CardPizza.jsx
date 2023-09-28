@@ -11,7 +11,7 @@ export default function CardPizza({ pizza }) {
         <div className=" col-12 col-md-6 col-xl-3 " >
             <div className="card">
                 <img src={pizza.img} className="card-img-top" alt="card description" />
-                <div className="card-body ">
+                <div className="card-body fixed-height-card ">
                     <h5 className="text-center"><b>{pizza.name.charAt(0).toUpperCase() +
                         pizza.name.slice(1)}</b></h5>
                     <hr />

@@ -62,6 +62,11 @@ h5 {
 .card-body {
     font-size: 20px;   
 }
+.fixed-height-card {
+    height: 300px; /* Puedes ajustar este valor según tus necesidades */
+    overflow-y: auto; /* Agrega un desplazamiento vertical si el contenido es demasiado largo */
+  }
+  
 
 
 .card {
@@ -71,24 +76,26 @@ h5 {
 
 
     border-radius: 10px;
-    height: 50rem;
-    margin-top: 10px;
+    height: 42rem;
+    margin-bottom: 15px;
 
 }
 
 .card img {
     max-width: 100%;
     height: auto;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .card h3 {
     font-size: 1.5rem;
-    margin: 10px 0;
+
 }
 
 .card p {
     font-size: 1rem;
-    margin-bottom: 20px;
+ 
 }
 
 h3 {
