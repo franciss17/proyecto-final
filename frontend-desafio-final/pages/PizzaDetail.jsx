@@ -28,10 +28,10 @@ export default function PizzaDetail() {
         <main className="container mt-5 p-5">
             <div className="card mb-3 mt-5">
                 <div className="row g-0">
-                    <div className="col-md-5">
+                    <div className="col-md-6">
                         <img src={pizza.img} style={imgStyle} className="rounded-start h-100" alt="Pizza" />
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-md-6">
                         <div className="card-body">
                             <h5 className="fs-1">• {pizza.name.charAt(0).toUpperCase() + pizza.name.slice(1).toLowerCase()}</h5>
                             <p className="card-text">{pizza.desc}</p>

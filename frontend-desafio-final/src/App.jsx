@@ -4,12 +4,11 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
 import Home from "../pages/Home";
-import Products from "../pages/Products";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Cart from "../pages/Cart";
 import PizzaDetail from "../pages/PizzaDetail";
-
+import UserProfile from "../pages/UserProfile.jsx";
 import Payment from "../pages/Payment.jsx";
 import NotFound from "../pages/NotFound";
 
@@ -51,6 +50,10 @@ const App = () => {
                     <Route
                         path="/Payment"
                         element={user ? <Payment /> : <Navigate to="/login" />}
+                    />
+                    <Route
+                        path="/profile/:id"
+                        element={<UserProfile/>}
                     />
                     <Route
                         path="/*"
