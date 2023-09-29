@@ -60,33 +60,41 @@ h5 {
 }
 
 .card-body {
-    font-size: 20px;
+    font-size: 20px;   
 }
+.fixed-height-card {
+    overflow-y: auto;
+  }
+  
+
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
+
+
     border-radius: 10px;
-    margin: 10px;
-    min-height: 400px;
+    height: 42rem;
+    margin-bottom: 15px;
+
 }
 
 .card img {
     max-width: 100%;
     height: auto;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .card h3 {
     font-size: 1.5rem;
-    margin: 10px 0;
+
 }
 
 .card p {
     font-size: 1rem;
-    margin-bottom: 20px;
+ 
 }
 
 h3 {
@@ -98,6 +106,7 @@ p {
 }
 
 .carrito {
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,7 +275,10 @@ p {
     background-color: #efefef;
 }
 .Register{
+    display: flex;
+    justify-content: center;
     background-color: #efefef;
+    padding: auto;
 }
 
 .carousel {
