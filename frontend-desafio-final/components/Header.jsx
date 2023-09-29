@@ -5,17 +5,17 @@ const Header = () => {
         <header className="nuevo-header">
             <div className="nuevo-header-content nuevo-container">
                 <div className="nuevo-header-txt">
-                    <span>Bienvenido a nuestra tienda</span>
-                    <h1>Ofertas especiales</h1>
+                    <h1>¡ Bienvenidos a La Trattoria del Chef !</h1>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A sint
-                        vitae aperiam ratione voluptas itaque quidem culpa voluptatibus.
-                        Excepturi sit repellat id accusantium doloribus quibusdam quo nam
-                        unde vel?
+                        • La Trattoria del Chef es un restaurante especializado en la venta de pizzas excepcionales.
+                    </p>
+                    <p>
+                        • Situado en un encantador rincón de la ciudad, este establecimiento se ha ganado una excelente
+                        reputación por ofrecer algunas de las pizzas más deliciosas y auténticas que se pueden encontrar.
                     </p>
                     <div className="nuevo-butons">
                         <a href="#" className="nuevo-btn-1">
-                            Informacion
+                            Información
                         </a>
                         <a href="#" className="nuevo-btn-1">
                             Leer más

@@ -26,47 +26,49 @@ export default function Cart() {
     }
 
     return (
-        <div className="container mt-5 p-5">
-            {showMessage && (
-                <div className="alert alert-danger text-center" role="alert">
-                    Primero debes iniciar sesión para continuar.
-                </div>
-            )}
-            <div>
-                <h1 className="text-center">Carro <i className="fas fa-shopping-cart"></i></h1>
+        <div className="container-detail">
+            <div className="container mt-5 p-5">
+                {showMessage && (
+                    <div className="alert alert-danger text-center" role="alert">
+                        Primero debes iniciar sesión para continuar.
+                    </div>
+                )}
                 <div>
-                    <table className="table table-striped-columns mt-5">
-                        <tbody>
-                            {carro.map((item) => {
-                                const pizza = pizzas.find((pizza) => pizza.id === item.id);
-                                const totalPrice = Number(item.precio) * Number(item.cantidad);
-                                return (
-                                    <tr key={item.id}>
-                                        <th scope="row" className="align-middle">
-                                            <img src={pizza.img} className="img-cart" alt="Pizza" /> {pizza.name}
-                                        </th>
-                                        <th className="text-center fs-4 align-middle">{FormatCoin(totalPrice)}</th>
-                                        <td className="align-middle">
-                                            <button className="btn btn-sm btn-danger" onClick={() => SubtractPizza(item.id)}>
-                                                -
-                                            </button>
-                                            <button className="btn btn-outline">{item.cantidad}</button>
-                                            <button className="btn btn-sm btn-primary" onClick={() => AddPizza(item.id)}>
-                                                +
-                                            </button>
-                                        </td>
-                                    </tr>
-                                );
-                            })}
-                        </tbody>
-                    </table>
-                    <h4 className="text-center">Total: {FormatCoin(total)}</h4>
-                    <div className="d-flex justify-content-center mt-3">
-                        <Link to="/Login" className="links fs-1 text-center">
-                            <button type="button" className="btn btn-outline-success" onClick={handlePaymentClick}>
-                                Ir al pago💲
-                            </button>
-                        </Link>
+                    <h1 className="text-center">Carro <i className="fas fa-shopping-cart"></i></h1>
+                    <div>
+                        <table className="table table-striped-columns mt-5">
+                            <tbody>
+                                {carro.map((item) => {
+                                    const pizza = pizzas.find((pizza) => pizza.id === item.id);
+                                    const totalPrice = Number(item.precio) * Number(item.cantidad);
+                                    return (
+                                        <tr key={item.id}>
+                                            <th scope="row" className="align-middle">
+                                                <img src={pizza.img} className="img-cart" alt="Pizza" /> {pizza.name}
+                                            </th>
+                                            <th className="text-center fs-4 align-middle">{FormatCoin(totalPrice)}</th>
+                                            <td className="align-middle">
+                                                <button className="btn btn-sm btn-danger" onClick={() => SubtractPizza(item.id)}>
+                                                    -
+                                                </button>
+                                                <button className="btn btn-outline">{item.cantidad}</button>
+                                                <button className="btn btn-sm btn-primary" onClick={() => AddPizza(item.id)}>
+                                                    +
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                        <h4 className="text-center">Total: {FormatCoin(total)}</h4>
+                        <div className="d-flex justify-content-center mt-3">
+                            <Link to="/Login" className="links fs-1 text-center">
+                                <button type="button" className="btn btn-outline-success" onClick={handlePaymentClick}>
+                                    Ir al pago💲
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
