@@ -32,43 +32,61 @@ const Register = () => {
     };
 
     return (
-        <div className='Register sticky-bottom'  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <form style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }} onSubmit={handleSubmit}>
-                <h2 style={{ textAlign: 'center' }}>Registro</h2>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="name" style={{ display: 'block', marginBottom: '5px' }}>Nombre:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={handleNameChange}
-                        style={{ width: '100%', padding: '5px' }}
-                        required
-                    />
+        <div className='Register sticky-bottom'>
+            <form className="form_container">
+                <h2 >Registro</h2>
+                <div className="title_container">
+                        <p className="title">Inicie Sesión</p>
+                        <span className="subtitle">
+                            Comience con nuestra aplicación, simplemente cree una cuenta y disfrute de la experiencia.
+                        </span>
+                    </div>
+                <div className="input_container">
+                    <label className="input_label" htmlFor="name" >Nombre:</label>
+                    
+                        <input
+                            placeholder="José Hernandez"
+                            title="Inpit title"
+                            name="input-name"
+                            type="text"
+                            value={name}
+                            onChange={handleNameChange}
+                            required
+                            className="input_field"
+                            id="name"
+                        />
                 </div>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="email" style={{ display: 'block', marginBottom: '5px' }}>Email:</label>
+                <div  className="input_container">
+                    <label className="input_label" htmlFor="email_field">Email:</label>
                     <input
                         type="email"
-                        id="email"
+                        placeholder="name@mail.com"
+                        title="Inpit title"
+                        className="input_field"
+                        name="input-name"
+                        id="email_field"
                         value={email}
                         onChange={handleEmailChange}
-                        style={{ width: '100%', padding: '5px' }}
                         required
                     />
                 </div>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="password" style={{ display: 'block', marginBottom: '5px' }}>Contraseña:</label>
+                <div className="input_container">
+                    <label className="input_label" htmlFor="password_field">
+                        Contraseña:
+                        </label>
                     <input
                         type="password"
-                        id="password"
+                        id="password_field"
+                        placeholder="Password"
+                        title="Inpit title"
+                        name="input-name"
+                        className="input_field"
                         value={password}
                         onChange={handlePasswordChange}
-                        style={{ width: '100%', padding: '5px' }}
                         required
                     />
                 </div>
-                <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}>Registrarse</button>
+                <button type="submit" className="sign-in_btn" >Registrarse</button>
             </form>
         </div>
     );

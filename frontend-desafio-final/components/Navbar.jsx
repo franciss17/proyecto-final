@@ -33,16 +33,16 @@ export default function Navbar() {
                 <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`} id="navbarNav">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">
+                            <Link className="nav-link ms-4" to="/">
                                 Inicio
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ms-4">
                             <Link className="nav-link" to="/Login">
                                 Iniciar sesión
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item ms-4">
                             <Link className="nav-link" to="/Register">
                                 Registrate
                             </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
                                 </Link>
                             </li>
                         )}
-                        <li className="nav-item">
+                        <li className="nav-item ms-4">
                             <Link className="nav-link" to="/Carrito">
                                 <i className="fas fa-shopping-cart"></i> {FormatCoin(total)}
                             </Link>

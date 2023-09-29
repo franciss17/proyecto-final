@@ -39,7 +39,6 @@ const Login = () => {
         <>
             <div className="login">
                 <form className="form_container">
-                    <div className="logo_container" />
                     <div className="title_container">
                         <p className="title">Ingrese a su cuenta</p>
                         <span className="subtitle">

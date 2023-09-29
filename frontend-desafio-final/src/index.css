@@ -63,8 +63,8 @@ h5 {
     font-size: 20px;   
 }
 .fixed-height-card {
-    height: 300px; /* Puedes ajustar este valor según tus necesidades */
-    overflow-y: auto; /* Agrega un desplazamiento vertical si el contenido es demasiado largo */
+    height: 300px; 
+    overflow-y: auto;
   }
   
 
@@ -107,6 +107,7 @@ p {
 }
 
 .carrito {
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,7 +276,10 @@ p {
     background-color: #efefef;
 }
 .Register{
+    display: flex;
+    justify-content: center;
     background-color: #efefef;
+    padding: auto;
 }
 
 .carousel {
