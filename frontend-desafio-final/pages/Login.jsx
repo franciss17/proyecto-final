@@ -5,40 +5,61 @@ import "../src/index.css"
 
 const Login = () => {
     const navigate = useNavigate();
-    const { saveToken, getUserProfile, loading, setLoading } = useContext(AuthContext);
+    const { saveToken, saveUser, getUserProfile, loading, setLoading } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const onEmailChange = (e) => {
+        const email = e.target.value
+        // Validaciones
+        // ....
+        // 
+        setEmail(email)
+    }
+
+    const onPasswordChange = (e) => {
+        setPassword(e.target.value);
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            setLoading(true);
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/user/login`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email,
-                    password,
-                }),
-            });
-            const { access_token } = await res.json();
-            saveToken(access_token);
-            await getUserProfile(access_token);
-            navigate("/Payment");
-        } catch (error) {
-            console.log(error);
-            // Mostrar un mensaje de error al usuario o hacer algo en caso de error.
-        } finally {
-            setLoading(false);
-        }
+        console.log(email);
+        console.log(password);
+        // Si el login es exitoso
+        // Uso el contexto
+        saveUser(email);
+        navigate ("/")
+
+
+
+        // try {
+        //     setLoading(true);
+        //     const res = await fetch(`${import.meta.env.VITE_API_URL}/user/login`, {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify({
+        //             email,
+        //             password,
+        //         }),
+        //     });
+        //     const { access_token } = await res.json();
+        //     saveToken(access_token);
+        //     await getUserProfile(access_token);
+        //     navigate("/Payment");
+        // } catch (error) {
+        //     console.log(error);
+        //     // Mostrar un mensaje de error al usuario o hacer algo en caso de error.
+        // } finally {
+        //     setLoading(false);
+        // }
     };
 
     return (
         <>
             <div className="login">
-                <form className="form_container">
+                <form className="form_container" onSubmit={handleSubmit}>
                     <div className="title_container">
                         <p className="title">Ingrese a su cuenta</p>
                         <span className="subtitle">
@@ -65,12 +86,14 @@ const Login = () => {
                             />
                         </svg>
                         <input
+                            onChange={onEmailChange}
                             placeholder="name@mail.com"
                             title="Inpit title"
                             name="input-name"
-                            type="text"
+                            type="email"
                             className="input_field"
                             id="email_field"
+                            required
                         />
                     </div>
                     <div className="input_container">
@@ -104,12 +127,14 @@ const Login = () => {
                             />
                         </svg>
                         <input
+                            onChange={onPasswordChange}
                             placeholder="Password"
                             title="Inpit title"
                             name="input-name"
                             type="password"
                             className="input_field"
                             id="password_field"
+                            required
                         />
                     </div>
                     <button title="Sign In" type="submit" className="sign-in_btn">

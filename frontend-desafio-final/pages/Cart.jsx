@@ -26,7 +26,7 @@ export default function Cart() {
     }
 
     return (
-        <div className="container mt-5 p-5">
+        <div className="container p-5 bg-light">
             {showMessage && (
                 <div className="alert alert-danger text-center" role="alert">
                     Primero debes iniciar sesión para continuar.

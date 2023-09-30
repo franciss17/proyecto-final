@@ -33,7 +33,7 @@ const Register = () => {
 
     return (
         <div className='Register sticky-bottom'>
-            <form className="form_container">
+            <form className="form_container" onSubmit={handleSubmit}>
                 <h2 >Registro</h2>
                 <div className="title_container">
                         <p className="title">Inicie Sesión</p>
