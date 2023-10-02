@@ -1,5 +1,5 @@
 main {
-    background-image: url(../assets/img/ty-finck-U_2AlnfIGIU-unsplash.jpg);
+    background-image: url(../assets/img/imagen-fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -10,6 +10,7 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #F0F0F0;
+
 }
 
 .nav-link {
@@ -53,6 +54,7 @@ h5 {
 .row {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .d-flex {
@@ -60,41 +62,7 @@ h5 {
 }
 
 .card-body {
-    font-size: 20px;   
-}
-.fixed-height-card {
-    overflow-y: auto;
-  }
-  
-
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-    border-radius: 10px;
-    height: 42rem;
-    margin-bottom: 15px;
-
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    padding: 5px;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-
-}
-
-.card p {
-    font-size: 1rem;
- 
+    font-size: 20px;
 }
 
 h3 {
@@ -106,7 +74,6 @@ p {
 }
 
 .carrito {
-    background-color: #efefef;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,7 +127,7 @@ p {
     max-width: 80%;
     text-align: center;
     line-height: 1.1rem;
-    color: #8B8E98;
+    color: #8B8E98
 }
 
 .input_container {
@@ -272,20 +239,11 @@ p {
 .login {
     display: flex;
     justify-content: center;
-    background-color: #efefef;
-}
-.Register{
-    display: flex;
-    justify-content: center;
-    background-color: #efefef;
-    padding: auto;
+    margin-top: 145px;
 }
 
 .carousel {
-    width: 65%;
-    margin: 0 auto;
-    margin-top: 145px;
-
+    margin-bottom: 120px;
 }
 
 .footer {
@@ -294,14 +252,10 @@ p {
     padding: 40px 0;
 }
 
-body {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-top {
@@ -395,108 +349,4 @@ body {
 .nuevo-header-img img {
     max-width: 100%;
     height: auto;
-}
-
-@media screen and (min-width: 992px) {
-
-    .navbar {
-        border-bottom: none;
-        border-radius: 0;
-    }
-
-    .form_container {
-        width: 50%;
-        margin-top: 6rem;
-        margin-bottom: 1rem;
-    }
-
-    .nuevo-header-img img {
-        max-width: 80%;
-    }
-}
-
-@media screen and (max-width: 991px) {
-
-    .navbar {
-        border-bottom: none;
-        border-radius: 0;
-    }
-
-    .form_container {
-        width: 70%;
-        padding: 30px;
-    }
-
-    .nuevo-header-img img {
-        max-width: 100%;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .subtitle {
-        font-size: 0.625rem;
-    }
-
-    .input_label {
-        font-size: 0.625rem;
-    }
-
-    .input_field {
-        height: 35px;
-    }
-
-    .sign-in_btn,
-    .sign-in_ggl,
-    .sign-in_apl {
-        height: 35px;
-    }
-
-    .separator {
-        gap: 20px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-    .navbar {
-        border-bottom: none;
-        border-radius: 0;
-    }
-
-    .form_container {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .nuevo-header-img img {
-        max-width: 100%;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .subtitle {
-        font-size: 0.625rem;
-    }
-
-    .input_label {
-        font-size: 0.625rem;
-    }
-
-    .input_field {
-        height: 35px;
-    }
-
-    .sign-in_btn,
-    .sign-in_ggl,
-    .sign-in_apl {
-        height: 35px;
-    }
-
-    .separator {
-        gap: 20px;
-    }
 }
