@@ -37,7 +37,6 @@ main {
 
 .links {
     text-decoration: none;
-    padding-top: 35px;
 }
 
 .title-table {
@@ -56,41 +55,46 @@ h5 {
     justify-content: space-between;
 }
 
+.d-flex {
+    padding-top: 85px;
+}
+
 .card-body {
-    font-size: 18px;
-    height: 435px;
+    font-size: 20px;   
 }
+.fixed-height-card {
+    overflow-y: auto;
+  }
+  
 
-.card-body-info {
-    font-size: 16px;
-    height: 495px;
-    margin-left: 15px;
-}
 
-.card-detail {
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 33px;
-    border: 1px solid #ccc;
+
+
     border-radius: 10px;
-    min-height: 400px;
-    background-color: #F0F0F0;
+    height: 42rem;
+    margin-bottom: 15px;
+
 }
 
 .card img {
     max-width: 100%;
     height: auto;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .card h3 {
     font-size: 1.5rem;
-    margin: 10px 0;
+
 }
 
 .card p {
     font-size: 1rem;
-    margin-bottom: 20px;
+ 
 }
 
 h3 {
@@ -102,6 +106,7 @@ p {
 }
 
 .carrito {
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -269,9 +274,11 @@ p {
     justify-content: center;
     background-color: #efefef;
 }
-
-.Register {
+.Register{
+    display: flex;
+    justify-content: center;
     background-color: #efefef;
+    padding: auto;
 }
 
 .carousel {
@@ -293,15 +300,8 @@ body {
     padding: 0;
 }
 
-.container-carrito {
+.container {
     margin: 0 auto;
-    background-color: #F0F0F0;
-}
-
-.container-detail {
-    margin: 0 auto;
-    background-color: #F0F0F0;
-    margin-top: 80px;
 }
 
 .footer-top {
@@ -333,8 +333,8 @@ body {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 35px;
-    border-top: 3px solid #555;
+    padding-top: 20px;
+    border-top: 1px solid #555;
 }
 
 .nuevo-header {
@@ -365,17 +365,15 @@ body {
 .nuevo-header-txt h1 {
     font-size: 36px;
     margin-top: 10px;
-    padding-bottom: 25px;
 }
 
 .nuevo-header-txt p {
     font-size: 18px;
     margin-top: 20px;
-    padding-right: 70px;
 }
 
 .nuevo-butons {
-    margin-top: 140px;
+    margin-top: 20px;
 }
 
 .nuevo-btn-1 {
