@@ -13,7 +13,7 @@ export default function Navbar() {
     };
     const signoff = () => {
         logout()
-        
+
     }
     
 
@@ -67,7 +67,7 @@ export default function Navbar() {
                                 </li>
 
                                 <li className="nav-item ms-3">
-                                    <button type="button" class="btn mt-1 " onClick={signoff, home}>
+                                    <button type="button" className="btn mt-1 " onClick={signoff}>
                                         <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>
                                     </button>
                                 </li>

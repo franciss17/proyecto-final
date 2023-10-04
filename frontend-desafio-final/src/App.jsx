@@ -19,7 +19,7 @@ import { AuthContext } from "../context/AuthContext.jsx";
 const App = () => {
     const { user } = useContext(AuthContext);
 
-    if (user === null) return <p>Cargando...</p>;
+    if (user === false) return <p>Cargando...</p>;
 
     return (
         <>
