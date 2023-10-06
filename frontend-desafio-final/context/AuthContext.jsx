@@ -6,7 +6,7 @@ const initialStateToken = localStorage.getItem("token");
 
 const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(initialStateToken);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState({});
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -14,6 +14,12 @@ const AuthProvider = ({ children }) => {
             getUserProfile(token);
         } else {
             setUser(false);
+        }
+        if (!user) {
+            const saveuser = localStorage.getItem("user")
+            if (saveuser) {
+                setUser(saveuser)
+            }
         }
     }, []);
 
@@ -35,19 +41,25 @@ const AuthProvider = ({ children }) => {
         }
     };
 
+    const saveUser = (user) => {
+        setUser(user);
+        localStorage.setItem("user", user);
+    };
+
+
     const saveToken = (accessToken) => {
         setToken(accessToken);
         localStorage.setItem("token", accessToken);
     };
-
     const logout = () => {
         setToken(null);
-        setUser(null);
-        localStorage.removeItem("token");
+        setUser(false);
+        //localStorage.removeItem("token");
+        localStorage.removeItem("user");
     };
 
     return (
-        <AuthContext.Provider value={{ saveToken, token, getUserProfile, user, loading, setLoading, logout }}>
+        <AuthContext.Provider value={{ saveUser, saveToken, token, getUserProfile, user, loading, setLoading, logout }}>
             {children}
         </AuthContext.Provider>
     );

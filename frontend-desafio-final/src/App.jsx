@@ -18,9 +18,7 @@ import { AuthContext } from "../context/AuthContext.jsx";
 
 const App = () => {
     const { user } = useContext(AuthContext);
-
-    if (user === null) return <p>Cargando...</p>;
-
+    if (user === false ) return <p>Cargando...</p>;
     return (
         <>
             <Navbar />
@@ -30,7 +28,6 @@ const App = () => {
                         path="/"
                         element={<Home />}
                     />
-                    
                     <Route
                         path="/pizzas/:id"
                         element={<PizzaDetail />}
@@ -53,7 +50,7 @@ const App = () => {
                     />
                     <Route
                         path="/profile/:id"
-                        element={<UserProfile/>}
+                        element={<UserProfile />}
                     />
                     <Route
                         path="/*"

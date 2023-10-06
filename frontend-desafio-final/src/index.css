@@ -60,12 +60,13 @@ h5 {
 }
 
 .card-body {
-    font-size: 20px;   
+    font-size: 20px;
 }
+
 .fixed-height-card {
     overflow-y: auto;
-  }
-  
+}
+
 
 
 .card {
@@ -94,7 +95,7 @@ h5 {
 
 .card p {
     font-size: 1rem;
- 
+
 }
 
 h3 {
@@ -274,7 +275,8 @@ p {
     justify-content: center;
     background-color: #efefef;
 }
-.Register{
+
+.Register {
     display: flex;
     justify-content: center;
     background-color: #efefef;
@@ -287,6 +289,11 @@ p {
     margin-top: 145px;
 
 }
+
+.nav-user-init {
+    display: flex;
+}
+
 
 .footer {
     background-color: #333;
