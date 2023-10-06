@@ -52,7 +52,7 @@ const App = () => {
                         element={user ? <Payment /> : <Navigate to="/login" />}
                     />
                     <Route
-                        path="/profile/:id"
+                        path="/profile"
                         element={<UserProfile/>}
                     />
                     <Route

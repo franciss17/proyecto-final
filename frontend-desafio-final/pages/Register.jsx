@@ -72,19 +72,30 @@ const Register = () => {
 
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <form style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }} onSubmit={handleSubmit}>
-                <h2 style={{ textAlign: 'center' }}>Registro</h2>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="name" style={{ display: 'block', marginBottom: '5px' }}>Nombre:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={handleNameChange}
-                        style={{ width: '100%', padding: '5px' }}
-                        required
-                    />
+
+        <div className='Register sticky-bottom'>
+            <form className="form_container" onSubmit={handleSubmit}>
+                <h2 >Registro</h2>
+                <div className="title_container">
+                        <p className="title">Inicie Sesión</p>
+                        <span className="subtitle">
+                            Comience con nuestra aplicación, simplemente cree una cuenta y disfrute de la experiencia.
+                        </span>
+                    </div>
+                <div className="input_container">
+                    <label className="input_label" htmlFor="name" >Nombre:</label>
+                    
+                        <input
+                            placeholder="José Hernandez"
+                            title="Inpit title"
+                            name="input-name"
+                            type="text"
+                            value={name}
+                            onChange={handleNameChange}
+                            required
+                            className="input_field"
+                            id="name"
+                        />
                 </div>
                 <div style={{ marginBottom: '10px' }}>
                     <label htmlFor="email" style={{ display: 'block', marginBottom: '5px' }}>Email:</label>

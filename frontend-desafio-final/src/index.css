@@ -287,6 +287,10 @@ p {
     margin-top: 145px;
 
 }
+.nav-user-init{
+    display: flex;
+}
+
 
 .footer {
     background-color: #333;

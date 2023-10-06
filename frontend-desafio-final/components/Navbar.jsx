@@ -6,11 +6,17 @@ import logo from "../assets/img/logo3.svg";
 
 export default function Navbar() {
     const { total, FormatCoin } = useOperationsContext();
-    const { user } = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+    const signoff = () => {
+        logout()
+
+    }
+    
+
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -37,25 +43,41 @@ export default function Navbar() {
                                 Inicio
                             </Link>
                         </li>
-                        <li className="nav-item ms-4">
-                            <Link className="nav-link" to="/Login">
-                                Iniciar sesión
-                            </Link>
-                        </li>
-                        <li className="nav-item ms-4">
-                            <Link className="nav-link" to="/Register">
-                                Registrate
-                            </Link>
-                        </li>
-                        {user && (
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/Payment">
-                                    Página de Pago
-                                </Link>
-                            </li>
+
+                        {!user && (
+                            <>
+                                <li className="nav-item ms-4">
+                                    <Link className="nav-link" to="/Login">
+                                        Iniciar sesión
+                                    </Link>
+                                </li>
+                                <li className="nav-item ms-4">
+                                    <Link className="nav-link" to="/Register">
+                                        Registrate
+                                    </Link>
+                                </li>
+                            </>
                         )}
+                        {user && (
+                            <ul className="nav-user-init navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/Payment">
+                                        Página de Pago
+                                    </Link>
+                                </li>
+
+                                <li className="nav-item ms-3">
+                                    <button type="button" className="btn mt-1 " onClick={signoff}>
+                                        <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>
+                                    </button>
+                                </li>
+                            </ul>
+
+
+                        )}
+
                         <li className="nav-item ms-4">
-                            <Link className="nav-link" to="/Carrito">
+                            <Link className="nav-link"  to="/Carrito">
                                 <i className="fas fa-shopping-cart"></i> {FormatCoin(total)}
                             </Link>
                         </li>

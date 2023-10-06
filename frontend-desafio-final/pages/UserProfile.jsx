@@ -1,17 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 
 function UserProfile() {
-  const { user } = useContext(AuthContext);
+
+  const { token } = useContext(AuthContext);
+  useEffect( async() => {
+    let headersList = {
+      "Authorization": `Bearer ${token}`
+    }
+
+    let response = await fetch("http://localhost:3000/usuarios", {
+      method: "GET",
+      headers: headersList
+    });
+
+    let data = await response.text();
+    console.log(data);
+
+  });
+
+  
+  
+   
 
   return (
     <div>
       <h2>Perfil del usuario</h2>
-      {user ? (
+      {true ? (
         <div>
-          <p>Nombre: {user.name}</p>
-          <p>Email: {user.email}</p>
+          <p>Nombre: </p>
+          <p>Email: </p>
         </div>
       ) : (
         <p>Usuario no autenticado</p>
