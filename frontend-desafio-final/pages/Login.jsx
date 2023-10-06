@@ -1,9 +1,12 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../context/AuthContext";
-import { useNavigate } from 'react-router-dom';
-import "../src/index.css"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom";
+
+
+import axios from "axios";
+
 
 const Login = () => {
+
     const navigate = useNavigate();
     const { saveToken, saveUser, getUserProfile, loading, setLoading } = useContext(AuthContext);
     const [email, setEmail] = useState("");
@@ -24,7 +27,16 @@ const Login = () => {
         setloginvalido(true)
     }
 
-    const handleSubmit = async (e) => {
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
         console.log(password);

@@ -1,5 +1,6 @@
 import React from "react";
-import "../src/index.css"
+import logo from "../assets/img/logo3.svg";
+import "../src/index.css";
 
 const Footer = () => {
     return (
@@ -9,16 +10,13 @@ const Footer = () => {
                     <div className="footer-location">
                         <h3>Ubicación</h3>
                         <p>Dirección de la tienda</p>
-                        <p>Ciudad, País</p>
+                        <p>Santiago, Chile</p>
                     </div>
                     <div className="footer-links">
                         <h3>Enlaces</h3>
                         <ul>
                             <li>
                                 <a href="#">Inicio</a>
-                            </li>
-                            <li>
-                                <a href="#">Menú</a>
                             </li>
                             <li>
                                 <a href="#">Sobre Nosotros</a>
@@ -30,11 +28,18 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Tu Nombre</p>
+                    <img
+                        src={logo}
+                        alt="Logo"
+                        width="85"
+                        height="75"
+                        style={{ backgroundColor: "#F0F0F0" }}
+                    />
+                    <p>&copy; {new Date().getFullYear()} La Trattoria del Chef</p>
                 </div>
             </div>
         </footer>
     );
-}
+};
 
 export default Footer;
