@@ -8,6 +8,7 @@ const Login = () => {
     const { saveToken, saveUser, getUserProfile, loading, setLoading } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loginvalido, setloginvalido] = useState(true)
 
     const onEmailChange = (e) => {
         const email = e.target.value
@@ -15,10 +16,12 @@ const Login = () => {
         // ....
         // 
         setEmail(email)
+        setloginvalido(true)
     }
 
     const onPasswordChange = (e) => {
         setPassword(e.target.value);
+        setloginvalido(true)
     }
 
     const handleSubmit = async (e) => {
@@ -26,9 +29,46 @@ const Login = () => {
         console.log(email);
         console.log(password);
         // Si el login es exitoso
+
+        let headersList = {
+            "Content-Type": "application/json"
+        }
+
+        let bodyContent = {
+            email: email,
+            password: password
+        }
+
+        let response = await fetch("http://localhost:3000/login", {
+            method: "POST",
+            body: JSON.stringify(bodyContent),
+            headers: headersList
+
+        });
+
+
+
+        const status = await response.status
+        let data = await response.text();
+        console.log(data);
+        console.log(status)
+
+        if (status === 200) {
+            saveUser(email);
+             saveToken(data)
+            navigate("/")
+           
+
+        }
+        else {
+            setloginvalido(false)
+        }
+
+
+
+
         // Uso el contexto
-        saveUser(email);
-        navigate ("/")
+
 
 
 
@@ -140,7 +180,14 @@ const Login = () => {
                     <button title="Sign In" type="submit" className="sign-in_btn">
                         <span>Sign In</span>
                     </button>
-                    
+
+                    {
+                        !loginvalido ?
+                            <div class="alert alert-danger" role="alert" >
+                                Usuario/contraseña erroneo.
+                            </div>
+                            : ''
+                    }
                 </form>
             </div>
         </>

@@ -6,7 +6,7 @@ const initialStateToken = localStorage.getItem("token");
 
 const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(initialStateToken);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState({});
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {

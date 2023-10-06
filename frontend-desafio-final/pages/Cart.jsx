@@ -18,6 +18,7 @@ export default function Cart() {
         } else {
             // Usuario no ha iniciado sesión, mostrar mensaje
             setShowMessage(true);
+            window.location.href = '/login';
         }
     };
 
@@ -62,11 +63,9 @@ export default function Cart() {
                     </table>
                     <h4 className="text-center">Total: {FormatCoin(total)}</h4>
                     <div className="d-flex justify-content-center mt-3">
-                        <Link to="/Login" className="links fs-1 text-center">
-                            <button type="button" className="btn btn-outline-success" onClick={handlePaymentClick}>
+                        <button type="button" className="btn btn-outline-success" onClick={handlePaymentClick}>
                                 Ir al pago💲
                             </button>
-                        </Link>
                     </div>
                 </div>
             </div>

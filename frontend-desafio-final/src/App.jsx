@@ -19,7 +19,7 @@ import { AuthContext } from "../context/AuthContext.jsx";
 const App = () => {
     const { user } = useContext(AuthContext);
 
-    if (user === false) return <p>Cargando...</p>;
+    if (user === null) return <p>Cargando...</p>;
 
     return (
         <>
@@ -52,7 +52,7 @@ const App = () => {
                         element={user ? <Payment /> : <Navigate to="/login" />}
                     />
                     <Route
-                        path="/profile/:id"
+                        path="/profile"
                         element={<UserProfile/>}
                     />
                     <Route
