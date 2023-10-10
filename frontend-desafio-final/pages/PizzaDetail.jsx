@@ -8,9 +8,7 @@ export default function PizzaDetail() {
     const { pizzas } = useUserContext();
     const { FormatCoin } = useOperationsContext();
     const navigate = useNavigate();
-
     const pizza = pizzas.find((item) => item.id === id);
-
     if (!pizza) {
         return null;
     }

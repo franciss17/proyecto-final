@@ -1,12 +1,9 @@
-import React, { useState } from "react"
-import { useNavigate } from "react-router-dom";
-
-
-import axios from "axios";
-
+import { useContext, useState } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from 'react-router-dom';
+import "../src/index.css"
 
 const Login = () => {
-
     const navigate = useNavigate();
     const { saveToken, saveUser, getUserProfile, loading, setLoading } = useContext(AuthContext);
     const [email, setEmail] = useState("");
@@ -27,16 +24,7 @@ const Login = () => {
         setloginvalido(true)
     }
 
-
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(email);
         console.log(password);
@@ -55,34 +43,22 @@ const Login = () => {
             method: "POST",
             body: JSON.stringify(bodyContent),
             headers: headersList
-
         });
-
-
 
         const status = await response.status
         let data = await response.text();
         console.log(data);
         console.log(status)
-
         if (status === 200) {
             saveUser(email);
-                saveToken(data)
+            saveToken(data)
             navigate("/")
-
-
         }
         else {
             setloginvalido(false)
         }
 
-
-
-
         // Uso el contexto
-
-
-
         // try {
         //     setLoading(true);
         //     const res = await fetch(`${import.meta.env.VITE_API_URL}/user/login`, {
@@ -191,7 +167,6 @@ const Login = () => {
                     <button title="Sign In" type="submit" className="sign-in_btn">
                         <span>Sign In</span>
                     </button>
-
                     {
                         !loginvalido ?
                             <div class="alert alert-danger" role="alert" >

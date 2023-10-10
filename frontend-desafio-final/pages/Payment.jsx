@@ -4,7 +4,6 @@ export default function Payment() {
     const [cardNumber, setCardNumber] = useState("");
     const [expiry, setExpiry] = useState("");
     const [cvv, setCvv] = useState("");
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Formulario enviado:", cardNumber, expiry, cvv);
@@ -50,7 +49,6 @@ export default function Payment() {
                             borderRadius: "5px",
                         }}
                     />
-
                     <label htmlFor="expiry">Fecha de vencimiento</label>
                     <input
                         type="text"
@@ -67,7 +65,6 @@ export default function Payment() {
                             borderRadius: "5px",
                         }}
                     />
-
                     <label htmlFor="cvv">CVV</label>
                     <input
                         type="text"
@@ -84,7 +81,6 @@ export default function Payment() {
                             borderRadius: "5px",
                         }}
                     />
-
                     <button
                         type="submit"
                         style={{

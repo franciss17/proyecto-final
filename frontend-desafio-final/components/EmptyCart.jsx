@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function EmptyCart() {
     return (
         <div className="carrito">
-            <div className="container-carrito mt-5 p-5">
+            <div className="container mt-5 p-5">
                 <div className="d-flex flex-column align-items-center">
                     <h1 className="text-center">Carrito <i className="fas fa-shopping-cart"></i></h1>
                     <h5 className="mt-5 text-center">Aún no has agregado ningún producto</h5>

@@ -13,14 +13,6 @@ const Header = () => {
                         • Situado en un encantador rincón de la ciudad, este establecimiento se ha ganado una excelente
                         reputación por ofrecer algunas de las pizzas más deliciosas y auténticas que se pueden encontrar.
                     </p>
-                    <div className="nuevo-butons">
-                        <a href="#" className="nuevo-btn-1">
-                            Información
-                        </a>
-                        <a href="#" className="nuevo-btn-1">
-                            Leer más
-                        </a>
-                    </div>
                 </div>
                 <div className="nuevo-header-img">
                     <img src="../assets/img/imagen-logo.jpg" alt="" />

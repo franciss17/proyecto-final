@@ -4,7 +4,6 @@ import Header from "../components/Header";
 
 export default function Products() {
     const { pizzas, error } = useUserContext();
-
     if (error) {
         return (
             <div className="container p-5 mt-5">

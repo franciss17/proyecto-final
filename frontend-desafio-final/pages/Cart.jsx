@@ -10,7 +10,6 @@ export default function Cart() {
     const { carro, total, SubtractPizza, AddPizza, FormatCoin } = useOperationsContext();
     const { user } = useContext(AuthContext);
     const [showMessage, setShowMessage] = useState(false);
-
     const handlePaymentClick = () => {
         if (user) {
             // Usuario ha iniciado sesión, redirigir al pago

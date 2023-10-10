@@ -32,7 +32,6 @@ const Register = () => {
     };
 
     return (
-
         <div className='Register sticky-bottom'>
             <form className="form_container" onSubmit={handleSubmit}>
                 <h2 >Registro</h2>

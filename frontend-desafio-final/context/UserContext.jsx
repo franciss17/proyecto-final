@@ -6,7 +6,6 @@ export default function UserContextProvider({ children }) {
 
     const [pizzas, setPizzas] = useState([])
     const [error, setError] = useState()
-
     const getData = async () => {
         try {
             const response = await fetch("/pizzas.json")

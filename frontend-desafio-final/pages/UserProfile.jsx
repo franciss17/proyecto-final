@@ -1,11 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 
-
 function UserProfile() {
-
   const { token } = useContext(AuthContext);
-  useEffect( async() => {
+  useEffect(async () => {
     let headersList = {
       "Authorization": `Bearer ${token}`
     }
@@ -17,12 +15,7 @@ function UserProfile() {
 
     let data = await response.text();
     console.log(data);
-
   });
-
-  
-  
-   
 
   return (
     <div>

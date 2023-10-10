@@ -46,11 +46,11 @@ const AuthProvider = ({ children }) => {
         localStorage.setItem("user", user);
     };
 
-
     const saveToken = (accessToken) => {
         setToken(accessToken);
         localStorage.setItem("token", accessToken);
     };
+    
     const logout = () => {
         setToken(null);
         setUser(false);
@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ saveUser, saveToken, token, getUserProfile, user, loading, setLoading, logout }}>
+        <AuthContext.Provider value={{saveUser, saveToken, token, getUserProfile, user, loading, setLoading, logout }}>
             {children}
         </AuthContext.Provider>
     );

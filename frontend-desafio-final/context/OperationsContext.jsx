@@ -7,15 +7,12 @@ export default function OperationsContextProvider({ children }) {
 
     const { pizzas } = useUserContext()
     const [carro, setCarro] = useState([])
-
     const FormatCoin = (number) =>
         (new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(number))
-
     let total = 0
     carro.map((i) => (
         total += Number(i.precio) * Number(i.cantidad)
     ))
-
     const AddPizza = (idPizza) => {
         const pizzaSeleccionada = pizzas.find(item => item.id === idPizza)
         if (carro.find(item => item.id === idPizza)) {
