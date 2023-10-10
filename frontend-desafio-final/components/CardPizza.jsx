@@ -24,15 +24,14 @@ export default function CardPizza({ pizza }) {
                     <hr />
                 </div>
                 <div className="align-self-end">
-
-                        <h4 className=" text-center"><b>{FormatCoin(pizza.price)}</b></h4>
-                        <div className="d-flex gap-3 justify-content-center p-2">
-                            <button className="btn btn-primary" onClick={() => {
-                                navigate(`/pizzas/${pizza.id}`);
-                            }}>Ver más 👀</button>
-                            <ButtonAdd idPizza={pizza.id} />
-                        </div> 
+                    <h4 className=" text-center"><b>{FormatCoin(pizza.price)}</b></h4>
+                    <div className="d-flex gap-3 justify-content-center p-2">
+                        <button className="btn btn-primary" onClick={() => {
+                            navigate(`/pizzas/${pizza.id}`);
+                        }}>Ver más 👀</button>
+                        <ButtonAdd idPizza={pizza.id} />
                     </div>
+                </div>
             </div>
         </div>
     );

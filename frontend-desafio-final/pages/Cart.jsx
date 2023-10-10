@@ -32,8 +32,8 @@ export default function Cart() {
                     Primero debes iniciar sesión para continuar.
                 </div>
             )}
-            <div>
-                <h1 className="text-center">Carro <i className="fas fa-shopping-cart"></i></h1>
+            <div className="products-total">
+                <h1 className="text-center">Carro de Compras <i className="fas fa-shopping-cart"></i></h1>
                 <div>
                     <table className="table table-striped-columns mt-5">
                         <tbody>
@@ -63,8 +63,8 @@ export default function Cart() {
                     <h4 className="text-center">Total: {FormatCoin(total)}</h4>
                     <div className="d-flex justify-content-center mt-3">
                         <button type="button" className="btn btn-outline-success" onClick={handlePaymentClick}>
-                                Ir al pago💲
-                            </button>
+                            Ir al pago💲
+                        </button>
                     </div>
                 </div>
             </div>

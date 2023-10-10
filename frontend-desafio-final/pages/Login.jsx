@@ -96,7 +96,7 @@ const Login = () => {
                     <br />
                     <div className="input_container">
                         <label className="input_label" htmlFor="email_field">
-                            Email
+                            Email:
                         </label>
                         <svg fill="none" viewBox="0 0 24 24" height={24}
                             width={24} xmlns="http://www.w3.org/2000/svg" className="icon"
@@ -125,7 +125,7 @@ const Login = () => {
                     </div>
                     <div className="input_container">
                         <label className="input_label" htmlFor="password_field">
-                            Password
+                            Contraseña:
                         </label>
                         <svg
                             fill="none"
@@ -165,7 +165,7 @@ const Login = () => {
                         />
                     </div>
                     <button title="Sign In" type="submit" className="sign-in_btn">
-                        <span>Sign In</span>
+                        <span>Iniciar Sesión</span>
                     </button>
                     {
                         !loginvalido ?

@@ -5,7 +5,7 @@ const Header = () => {
         <header className="nuevo-header">
             <div className="nuevo-header-content nuevo-container">
                 <div className="nuevo-header-txt">
-                    <h1>¡ Bienvenidos a La Trattoria del Chef !</h1>
+                    <h1>Bienvenidos a La Trattoria del Chef</h1>
                     <p>
                         • La Trattoria del Chef es un restaurante especializado en la venta de pizzas excepcionales.
                     </p>

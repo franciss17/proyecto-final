@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useOperationsContext } from "../context/OperationsContext";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import logo from "../assets/img/logo3.svg";
+import logo from "../assets/img/logo1.svg";
 
 export default function Navbar() {
     const { total, FormatCoin } = useOperationsContext();

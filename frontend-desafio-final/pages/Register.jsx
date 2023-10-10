@@ -5,7 +5,6 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
     const handleNameChange = (e) => {
         setName(e.target.value);
     };
@@ -20,12 +19,9 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-
         console.log('Name:', name);
         console.log('Email:', email);
         console.log('Password:', password);
-
         setName('');
         setEmail('');
         setPassword('');
@@ -34,29 +30,27 @@ const Register = () => {
     return (
         <div className='Register sticky-bottom'>
             <form className="form_container" onSubmit={handleSubmit}>
-                <h2 >Registro</h2>
+                <h2>Registro</h2>
                 <div className="title_container">
-                        <p className="title">Inicie Sesión</p>
-                        <span className="subtitle">
-                            Comience con nuestra aplicación, simplemente cree una cuenta y disfrute de la experiencia.
-                        </span>
-                    </div>
+                    <span className="subtitle">
+                        Comience con nuestra aplicación, simplemente cree una cuenta y disfrute de la experiencia.
+                    </span>
+                </div>
                 <div className="input_container">
                     <label className="input_label" htmlFor="name" >Nombre:</label>
-                    
-                        <input
-                            placeholder="José Hernandez"
-                            title="Inpit title"
-                            name="input-name"
-                            type="text"
-                            value={name}
-                            onChange={handleNameChange}
-                            required
-                            className="input_field"
-                            id="name"
-                        />
+                    <input
+                        placeholder="Introduce tu nombre aquí"
+                        title="Inpit title"
+                        name="input-name"
+                        type="text"
+                        value={name}
+                        onChange={handleNameChange}
+                        required
+                        className="input_field"
+                        id="name"
+                    />
                 </div>
-                <div  className="input_container">
+                <div className="input_container">
                     <label className="input_label" htmlFor="email_field">Email:</label>
                     <input
                         type="email"
@@ -73,7 +67,7 @@ const Register = () => {
                 <div className="input_container">
                     <label className="input_label" htmlFor="password_field">
                         Contraseña:
-                        </label>
+                    </label>
                     <input
                         type="password"
                         id="password_field"
