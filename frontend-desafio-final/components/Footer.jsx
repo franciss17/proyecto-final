@@ -40,7 +40,7 @@ const Footer = () => {
                         width="85"
                         height="75"
                     />
-                    <p>&copy; {new Date().getFullYear()} La Trattoria del Chef</p>
+                    <p>&copy; {new Date().getFullYear()} La Trattoria del Chef.</p>
                 </div>
             </div>
         </footer>

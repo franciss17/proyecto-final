@@ -1,6 +1,6 @@
-import { useUserContext } from "../context/UserContext";
-import CardPizza from "../components/CardPizza";
-import Header from "../components/Header";
+import { useUserContext } from "../context/UserContext.jsx";
+import CardPizza from "../components/CardPizza.jsx";
+import Header from "../components/Header.jsx";
 import Carousel from 'react-bootstrap/Carousel';
 
 export default function Products() {
