@@ -24,9 +24,7 @@ app.post("/login", verificarCredencial, reportar, async (req, res) => {
     try {
         const { email, password } = req.body;
         await iniciar(email, password);
-
         const token = jwt.sign({ email, password }, "SUPERCLAVE");
-
         console.log("Usuario inicia sesion // El token es: " + token);
         res.send(token)
     } catch (error) {
@@ -40,7 +38,6 @@ app.get("/usuarios", verificarToken, async (req, res) => {
         const Authorization = req.header("Authorization");
         const token = Authorization.split("Bearer ")[1];
         const { email } = jwt.verify(token, "SUPERCLAVE");
-
         const data = await getUsuario(email);
         res.send(data);
     } catch (error) {

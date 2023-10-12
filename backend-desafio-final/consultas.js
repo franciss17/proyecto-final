@@ -13,17 +13,13 @@ const pool = new Pool({
 
 const registrar = async (usuario) => {
     let { nombre, email, password } = usuario;
-
     const passEncriptada = bcrypt.hashSync(password);
-
     console.log("Nombre: " + nombre);
     console.log("Nuevo Usuario: " + email);
     console.log("Password: " + password);
     console.log("Password Encriptado: " + passEncriptada);
-
     const consulta = "INSERT INTO registro VALUES (DEFAULT, $1, $2, $3)";
     const values = [nombre, email, passEncriptada]
-
     try {
         await pool.query(consulta, values)
     } catch (error) {
@@ -35,15 +31,11 @@ const iniciar = async (email, password) => {
 
     const consulta = "SELECT * FROM registro WHERE email = $1"
     const values = [email];
-
     try {
-
         const { rows: [usuario], rowCount } = await pool.query(consulta, values);
-
         if (rowCount == 1) {
             const EncriptedDBPass = usuario.password;
             const passCorrecta = bcrypt.compareSync(password, EncriptedDBPass);
-
             if (passCorrecta) {
                 console.log("Usuario Validado");
                 return { error: false, msg: "Bienvenido." };
@@ -54,7 +46,6 @@ const iniciar = async (email, password) => {
         } else {
             return { error: true, msg: "Sus datos son invalidos: Usuario y/o contraseña incorrectos" };
         }
-
     } catch (error) {
         console.log(error);
         return { error: true, msg: "Error" };
@@ -66,7 +57,6 @@ const getUsuario = async (email) => {
 
     const consulta = "SELECT nombre, email FROM registro WHERE email = $1";
     const values = [email];
-
     try {
         const { rows } = await pool.query(consulta, values);
         return rows[0];
@@ -80,7 +70,6 @@ const getUsuario = async (email) => {
 const verificar = async (email) => {
     const consulta = "SELECT COUNT(*) FROM registro WHERE email = $1";
     const values = [email];
-
     try {
         const { rows: [{ count }] } = await pool.query(consulta, values);
         return count > 0;
@@ -93,13 +82,11 @@ const verificar = async (email) => {
 const validar = async (email, password) => {
     const consulta = "SELECT password FROM registro WHERE email = $1";
     const values = [email];
-
     try {
         const { rows } = await pool.query(consulta, values);
         if (rows.length === 0) {
             return false;
         }
-
         const storedPassword = rows[0].password;
         return bcrypt.compareSync(password, storedPassword);
     } catch (error) {

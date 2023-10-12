@@ -1,7 +1,6 @@
 -- Crear tabla clientes
 
 create table registro (
-    
     id serial primary key, 
     nombre varchar(50), 
     email varchar(100) NOT NULL UNIQUE, 
@@ -13,37 +12,26 @@ select * from registro;
 -- Crear tabla pizzas
 
 create table pizzas(
-    
     id varchar(50) primary key, 
     titulo varchar(50) NOT NULL, 
     descripcion varchar(500), 
     valor integer NOT NULL,
     img varchar(100)
-    
-    
     );
 
 select * from pizzas;
-
     -- crear tabla ingredientes
-
     create table ingredientes(
-
     id_pizzas varchar(50), 
     ingrediente varchar(100)
-
     );
 
 select * from ingredientes;
-
 -- Crear tabla compra
-
 create table compra (
-    
     id integer primary key, 
     nombre_id integer, 
     pizza_id varchar(50)
-    
     );
 
 select * from compra;
