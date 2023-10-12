@@ -31,14 +31,22 @@ export default function PizzaDetail() {
                     </div>
                     <div className="col-md-6">
                         <div className="card-body">
-                            <h5 className="fs-1">• {pizza.name.charAt(0).toUpperCase() + pizza.name.slice(1).toLowerCase()}</h5>
-                            <p className="card-text">{pizza.desc}</p>
+                            <h5 className="fs-1">
+                                •
+                                {pizza.name.charAt(0).toUpperCase() + pizza.name.slice(1).toLowerCase()}
+                            </h5>
+                            <p className="card-text">
+                                {pizza.desc}
+                            </p>
                             <p className="card-text">
                                 <b>Ingredientes:</b>
                             </p>
                             <ul className="list-unstyled ps-4">
                                 {pizza.ingredients.map((ingredient) => (
-                                    <li key={Math.random()}>• {ingredient}</li>
+                                    <li key={Math.random()}>
+                                        •
+                                        {ingredient}
+                                    </li>
                                 ))}
                             </ul>
                             <h3>Precio: {FormatCoin(pizza.price)}</h3>

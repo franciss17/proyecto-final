@@ -10,11 +10,9 @@ export default function ButtonAdd({ idPizza }) {
 
     const handlePaymentClick = () => {
         if (user) {
-            // Usuario ha iniciado sesión, redirigir al pago
             handleAddPizza();
             window.location.href = '/Payment';
         } else {
-            // Usuario no ha iniciado sesión, mostrar mensaje
             toast.error("Primero debes iniciar sesión para continuar");
         }
     };
