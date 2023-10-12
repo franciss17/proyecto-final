@@ -1,7 +1,9 @@
+import React from 'react';
 import { useUserContext } from "../context/UserContext.jsx";
 import CardPizza from "../components/CardPizza.jsx";
 import Header from "../components/Header.jsx";
-import Carousel from 'react-bootstrap/Carousel';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function Products() {
     const { pizzas, error } = useUserContext();
@@ -16,23 +18,39 @@ export default function Products() {
     }
 
     return (
-        <div className="products-container ">
+        <div className="products-container">
             <Header />
-            <div className="carousel">
-                <Carousel>
-                    {pizzas.map((item) => (
-                        <Carousel.Item key={item.id}>
-                            <img
-                                className="d-block w-100 pizza-image"
-                                src={item.img}
-                                alt={item.name}
-                            />
-                            <Carousel.Caption>
-                                <h3 className="pizza-name">{item.name}</h3>
-                                <p className="pizza-description">{item.desc}</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    ))}
+            <div className="carousel-section">
+                <Carousel showArrows={true}>
+                    <div>
+                        <img
+                            className="carousel-image"
+                            src="../assets/img/oferta-2.jpg"
+                            alt="Imagen 1"
+                        />
+                        <p className="legend">
+                            ARMA TU PIZZA
+                            PROMO 2X1
+                        </p>
+                    </div>
+                    <div>
+                        <img
+                            className="carousel-image"
+                            src="../assets/img/oferta-1.jpg"
+                            alt="Imagen 2"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            className="carousel-image"
+                            src="../assets/img/oferta-3.jpg"
+                            alt="Imagen 3"
+                        />
+                        <p className="legend">
+                            ESPECIALIDADES
+                            2X1
+                        </p>
+                    </div>
                 </Carousel>
             </div>
             <div className="container p-5 mt-5">

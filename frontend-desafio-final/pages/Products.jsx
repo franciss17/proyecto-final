@@ -17,7 +17,7 @@ export default function Products() {
     return (
         <>
             <Header />
-            <div className="container p-5 mt-5">
+            <div className="container p-5 mt-4">
                 <div className="row">
                     {pizzas.map((item) => (
                         <CardPizza pizza={item} key={item.id} />

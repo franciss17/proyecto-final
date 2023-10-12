@@ -67,18 +67,13 @@ h5 {
     overflow-y: auto;
 }
 
-
-
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
     border-radius: 10px;
     height: 42rem;
     margin-bottom: 15px;
-
 }
 
 .card img {
@@ -90,12 +85,10 @@ h5 {
 
 .card h3 {
     font-size: 1.5rem;
-
 }
 
 .card p {
     font-size: 1rem;
-
 }
 
 h3 {
@@ -376,7 +369,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
+    padding-top: 35px;
 }
 
 .nuevo-header-txt {
@@ -423,6 +416,49 @@ body {
 .nuevo-header-img img {
     max-width: 100%;
     height: auto;
+}
+
+.carousel-root {
+    padding: 20px;
+    margin: 20px;
+    width: 500px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.carousel {
+    margin-top: 5px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #212121;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.legend {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+    text-align: center;
 }
 
 @media screen and (min-width: 992px) {
