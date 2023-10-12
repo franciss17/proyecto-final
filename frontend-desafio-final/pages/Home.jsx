@@ -29,8 +29,9 @@ export default function Products() {
                             alt="Imagen 1"
                         />
                         <p className="legend">
+                            PROMO
                             ARMA TU PIZZA
-                            PROMO 2X1
+                            2X1
                         </p>
                     </div>
                     <div>
@@ -47,6 +48,7 @@ export default function Products() {
                             alt="Imagen 3"
                         />
                         <p className="legend">
+                            PROMO 
                             ESPECIALIDADES
                             2X1
                         </p>
