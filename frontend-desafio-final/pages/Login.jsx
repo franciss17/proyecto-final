@@ -43,22 +43,35 @@ const Login = () => {
             method: "POST",
             body: JSON.stringify(bodyContent),
             headers: headersList
+
         });
+
+
 
         const status = await response.status
         let data = await response.text();
         console.log(data);
         console.log(status)
+
         if (status === 200) {
             saveUser(email);
-            saveToken(data)
+             saveToken(data)
             navigate("/")
+           
+
         }
         else {
             setloginvalido(false)
         }
 
+
+
+
         // Uso el contexto
+
+
+
+
         // try {
         //     setLoading(true);
         //     const res = await fetch(`${import.meta.env.VITE_API_URL}/user/login`, {
@@ -96,7 +109,7 @@ const Login = () => {
                     <br />
                     <div className="input_container">
                         <label className="input_label" htmlFor="email_field">
-                            Email:
+                            Email
                         </label>
                         <svg fill="none" viewBox="0 0 24 24" height={24}
                             width={24} xmlns="http://www.w3.org/2000/svg" className="icon"
@@ -125,7 +138,7 @@ const Login = () => {
                     </div>
                     <div className="input_container">
                         <label className="input_label" htmlFor="password_field">
-                            Contraseña:
+                            Password
                         </label>
                         <svg
                             fill="none"
@@ -165,8 +178,9 @@ const Login = () => {
                         />
                     </div>
                     <button title="Sign In" type="submit" className="sign-in_btn">
-                        <span>Iniciar Sesión</span>
+                        <span>Sign In</span>
                     </button>
+
                     {
                         !loginvalido ?
                             <div class="alert alert-danger" role="alert" >
