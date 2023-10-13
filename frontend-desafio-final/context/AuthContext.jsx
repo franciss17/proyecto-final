@@ -54,8 +54,8 @@ const AuthProvider = ({ children }) => {
     const logout = () => {
         setToken(null);
         setUser(false);
-        //localStorage.removeItem("token");
         localStorage.removeItem("user");
+        localStorage.removeItem("token");
     };
 
     return (

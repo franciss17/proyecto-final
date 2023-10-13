@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import "../src/index.css"
+import axios from "axios";
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,7 +20,7 @@ const Register = () => {
         setPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Name:', name);
         console.log('Email:', email);
@@ -25,6 +28,16 @@ const Register = () => {
         setName('');
         setEmail('');
         setPassword('');
+
+        try{
+            await axios.post("http://localhost:3000/usuarios", {name, email, password});
+            alert("Usuario registrado con éxito");
+            navigate("/Login");
+          } catch (error) {
+            alert("Algo salió mal ...");
+            console.log(error);
+          }
+
     };
 
     return (
