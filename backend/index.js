@@ -2,7 +2,7 @@
     const app = express()
     const cors = require('cors')
     const { verificarToken, verificarCredencial, reportar } = require("./middlewares")
-    const { registrar, iniciar, getUsuario, insertarPizza } = require('./consultas')
+    const { registrar, iniciar, getUsuario, insertarPizza, obtenerPizzas } = require('./consultas')
     const jwt = require('jsonwebtoken')
 
     app.listen(3000, console.log("Servidor en puerto 3000"))
@@ -53,4 +53,17 @@
         insertarPizza(nuevaPizza);
         res.status(200).json({ message: 'Pizza creada exitosamente' });
       });
+
+    app.get('/api/pizzas', async (req, res) => {
+        try {
+            // Llama a la función para obtener los datos de la tabla de pizzas
+            const pizzas = await obtenerPizzas();
+
+            // Envía los datos de las pizzas como respuesta en formato JSON
+            res.json(pizzas);
+        } catch (error) {
+            console.error('Error al obtener datos de pizzas:', error);
+            res.status(500).json({ error: 'Error al obtener datos de pizzas' });
+        }
+    });
 

@@ -122,7 +122,18 @@ const insertarPizza = async (pizza) => {
       console.error("Error al insertar la pizza: " + error.message);
     }
   };
+  const obtenerPizzas = async () => {
+    try {
+      const client = await pool.connect();
+      const result = await client.query('SELECT * FROM pizzas');
+      client.release();
+      return result.rows;
+    } catch (error) {
+      console.error('Error al obtener datos de pizzas:', error);
+      throw error;
+    }
+  };
   
   
 
-module.exports = { registrar, iniciar, getUsuario, verificar, validar, insertarPizza};
+module.exports = { registrar, iniciar, getUsuario, verificar, validar, insertarPizza, obtenerPizzas};
