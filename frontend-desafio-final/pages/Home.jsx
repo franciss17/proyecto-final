@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { useUserContext } from "../context/UserContext.jsx";
 import CardPizza from "../components/CardPizza.jsx";
 import Header from "../components/Header.jsx";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+
 
 export default function Products() {
     const { pizzas, error } = useUserContext();

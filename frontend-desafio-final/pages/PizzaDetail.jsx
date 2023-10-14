@@ -8,7 +8,10 @@ export default function PizzaDetail() {
     const { pizzas } = useUserContext();
     const { FormatCoin } = useOperationsContext();
     const navigate = useNavigate();
-    const pizza = pizzas.find((item) => item.id === id);
+    console.log(pizzas)
+    const pizza = pizzas.find((item) => item.id == id);
+    console.log(pizza)
+
     if (!pizza) {
         return null;
     }
@@ -33,23 +36,23 @@ export default function PizzaDetail() {
                         <div className="card-body">
                             <h5 className="fs-1">
                                 •
-                                {pizza.name.charAt(0).toUpperCase() + pizza.name.slice(1).toLowerCase()}
+                                {pizza.titulo.charAt(0).toUpperCase() + pizza.titulo.slice(1).toLowerCase()}
                             </h5>
                             <p className="card-text">
-                                {pizza.desc}
+                                {pizza.descripcion}
                             </p>
                             <p className="card-text">
                                 <b>Ingredientes:</b>
                             </p>
                             <ul className="list-unstyled ps-4">
-                                {pizza.ingredients.map((ingredient) => (
+                                {pizza.ingredients && pizza.ingredients.split(",").map((ingredient) => (
                                     <li key={Math.random()}>
                                         •
-                                        {ingredient}
+                                        {ingredient.trim()}
                                     </li>
                                 ))}
                             </ul>
-                            <h3>Precio: {FormatCoin(pizza.price)}</h3>
+                            <h3>Precio: {FormatCoin(pizza.valor)}</h3>
                             <div className="d-flex justify-content-end gap-3">
                                 <button className="btn btn-primary" onClick={handleGoBack}>
                                     Volver <i className="fa-solid fa-house"></i>

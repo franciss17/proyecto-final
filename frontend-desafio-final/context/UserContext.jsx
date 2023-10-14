@@ -8,9 +8,12 @@ export default function UserContextProvider({ children }) {
     const [error, setError] = useState()
     const getData = async () => {
         try {
-            const response = await fetch("/pizzas.json")
-            if (!response.ok) throw "NO SE PUEDE DESPLEGAR LA INFORMACIÓN"
-            const data = await response.json()
+            let response = await fetch("http://localhost:3000/api/pizzas", {
+                method: "GET",
+            });
+
+            let data = await response.json();
+            
             setPizzas(data)
         } catch (error) {
             setError(error)

@@ -24,20 +24,20 @@ export default function CardPizza({ pizza }) {
     return (
         <div className="col-12 col-md-6 col-xl-3">
             <div className="card">
-                <img src={pizza.img} className="card-img-top" alt={pizza.name} />
+                <img src={pizza.img} className="card-img-top" alt={pizza.titulo} />
                 <div className="card-body fixed-height-card">
-                    <h5 className="text-center"><b>{pizza.name.charAt(0).toUpperCase() + pizza.name.slice(1)}</b></h5>
+                    <h5 className="text-center"><b>{pizza.titulo.charAt(0).toUpperCase() + pizza.titulo.slice(1)}</b></h5>
                     <hr />
                     <p><b>Ingredientes:</b></p>
                     <ul className="list-unstyled">
-                        {pizza.ingredients.map((item, index) => (
-                            <li key={index}>• {item}</li>
+                        {pizza.ingredients && pizza.ingredients.split(",").map((item, index) => (
+                            <li key={index}>• {item.trim()}</li>
                         ))}
                     </ul>
                     <hr />
                 </div>
                 <div className="align-self-end">
-                    <h4 className="text-center"><b>{FormatCoin(pizza.price)}</b></h4>
+                    <h4 className="text-center"><b>{FormatCoin(pizza.valor)}</b></h4>
                     <div className="d-flex gap-3 justify-content-center p-2">
                         <button className="btn btn-primary" onClick={() => navigate(`/pizzas/${pizza.id}`)}>Ver más 👀</button>
                         <ButtonAdd idPizza={pizza.id} />
